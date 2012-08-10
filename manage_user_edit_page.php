@@ -80,7 +80,18 @@
 		<?php echo lang_get( 'username' ) ?>
 	</td>
 	<td width="70%">
-		<input type="text" size="32" maxlength="<?php echo DB_FIELD_SIZE_USERNAME;?>" name="username" value="<?php echo string_attribute( $t_user['username'] ) ?>" />
+		<?php
+		if ( !$t_ldap || config_get( 'use_ldap_email' ) == OFF ) {
+		?>
+			<input type="text" size="32" maxlength="<?php echo DB_FIELD_SIZE_USERNAME;?>" name="username" value="<?php echo string_attribute( $t_user['username'] ) ?>" />
+		<?php
+		} else {
+			echo string_display( $t_user['username'] );
+			<input type="hidden" name="username" value="<?php echo string_attribute( $t_user['username'] ) ?>" />
+		?>
+		<?php
+		}
+		?>
 	</td>
 </tr>
 

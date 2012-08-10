@@ -1718,6 +1718,14 @@ document.getElementById( span ).style.display = displayType;
 				}
 
 				echo htmlspecialchars( $v_content );
+				$t_text_to_encoding = trim(config_get( 'preview_text_to_encoding' ));
+				$t_text_mixed_from_encoding = trim(config_get( 'preview_text_mixed_from_encoding' ));
+
+				if (empty($t_text_to_encoding) || empty($t_text_mixed_from_encoding)) {
+					echo htmlspecialchars( $v_content );
+				} else {
+					echo mb_convert_encoding($v_content,$t_text_to_encoding,$t_text_mixed_from_encoding);
+				}
 				echo "</pre></span>\n";
 			}
 

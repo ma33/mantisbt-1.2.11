@@ -783,7 +783,7 @@ function email_bug_deleted( $p_bug_id ) {
  */
 function email_store( $p_recipient, $p_subject, $p_message, $p_headers = null ) {
 	$t_recipient = trim( $p_recipient );
-	$t_subject = string_email( trim( $p_subject ) );
+	$t_subject = string_email( trim( email_ade_subject( $p_subject )) );
 	$t_message = string_email_links( trim( $p_message ) );
 
 	# short-circuit if no recipient is defined, or email disabled
@@ -1439,4 +1439,11 @@ function email_build_visible_bug_data( $p_user_id, $p_bug_id, $p_message_id ) {
 	$t_bug_data['relations'] = relationship_get_summary_text( $p_bug_id );
 
 	return $t_bug_data;
+}
+
+function email_ade_subject($subject) {
+	$p_site_name = trim(config_get( 'site_name' ));
+	$p_site_name = empty($p_site_name) ? "null" : $p_site_name;
+
+	return '[' . $p_site_name . '][mantis]' . $subject;
 }

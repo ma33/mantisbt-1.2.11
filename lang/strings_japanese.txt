@@ -300,9 +300,9 @@ $s_project_status_enum_string = '10:開発,30:リリース,50:安定,70:廃止';
 $s_project_view_state_enum_string = '10:公開,50:非公開';
 $s_view_state_enum_string = '10:公開,50:非公開';
 $s_priority_enum_string = '10:未定,20:低,30:中,40:高,50:緊急,60:即時';
-$s_severity_enum_string = '10:要望,20:些細な,30:表示,40:微調整,50:マイナー,60:メジャー,70:クラッシュ,80:システム停止';
+$s_severity_enum_string = '10:要望,20:些細な,30:表示,40:微調整,50:マイナー,60:メジャー,70:アプリケーションエラー,80:システム停止';
 $s_reproducibility_enum_string = '10:毎回,30:時々,50:不定,70:未試験,90:再現不可,100:不明';
-$s_status_enum_string = '10:新規,20:フィードバック,30:内容確認済,40:再現済,50:担当者決定,80:解決済,90:完了';
+$s_status_enum_string = '10:新規,20:フィードバック,30:内容確認済,40:作業中,50:担当者決定,80:解決済,90:完了';
 $s_resolution_enum_string = '10:不明,20:実装済,30:差戻し,40:再現不可,50:修正不可,60:二重登録,70:修正不要,80:保留,90:後回し';
 $s_projection_enum_string = '10:未定,30:些細な修正,50:小さな修正,70:大きな修正,90:再設計';
 $s_eta_enum_string = '10:未定,20:1日以内,30:2～3日,40:1週間以内,50:1か月以内,60:1か月以上';
@@ -1227,3 +1227,5 @@ $s_month_september = '9月';
 $s_month_october = '10月';
 $s_month_november = '11月';
 $s_month_december = '12月';
+
+$s_sso = 'シングルサインオンする';

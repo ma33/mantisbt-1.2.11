@@ -720,7 +720,9 @@ function auth_reauthenticate_page( $p_user_id, $p_username ) {
 </tr>
 
 <tr>
-	<td class="center" colspan="2"><input type="submit" class="button" value="<?php echo lang_get( 'login_button' );?>" /></td>
+	<td class="center" colspan="2"><input type="submit" class="button" value="<?php echo lang_get( 'login_button' );?>" />
+		<a href="<?php echo helper_mantis_url( '../sso_mantis.php' ) ?>"><?php echo lang_get( 'sso' ); ?></a>
+	</td>
 </tr>
 </table>
 

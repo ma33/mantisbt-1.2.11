@@ -240,7 +240,9 @@
 <tr>
 	<td class="form-title" colspan="5">
 		<?php echo lang_get( 'manage_accounts_title' ) ?> [<?php echo $total_user_count ?>]
-		<?php print_button( 'manage_user_create_page.php', lang_get( 'create_new_account_link' ) ) ?>
+		<?php if(! LDAP == config_get( 'login_method' )) {?>
+			<?php print_button( 'manage_user_create_page.php', lang_get( 'create_new_account_link' ) ) ?>
+		<?php }?>
 		<?php if ( $f_filter === 'UNUSED' ) echo print_button( 'manage_user_prune.php', lang_get( 'prune_accounts' ) ); ?>
 	</td>
 	<td class="center" colspan="3">

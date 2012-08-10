@@ -90,7 +90,7 @@
 	# - If errors, use the value passed in.
 	if ( $t_session_validation ) {
 		if ( !$f_error && !$f_cookie_error ) {
-			$t_default_secure_session = ( is_null( $f_secure_session_cookie ) ? true : $f_secure_session_cookie );
+			$t_default_secure_session = ( is_null( $f_secure_session_cookie ) ? false : $f_secure_session_cookie );
 		} else {
 			$t_default_secure_session = $f_secure_session;
 		}
@@ -168,6 +168,8 @@
 <tr>
 	<td class="center" colspan="2">
 		<input type="submit" class="button" value="<?php echo lang_get( 'login_button' ) ?>" />
+		&nbsp;
+		<a href="<?php echo helper_mantis_url( '../sso_mantis.php' ) ?>"><?php echo lang_get( 'sso' ) ?></a>
 	</td>
 </tr>
 </table>

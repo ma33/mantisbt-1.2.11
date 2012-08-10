@@ -123,7 +123,7 @@ function form_security_param( $p_form_name ) {
  * @return boolean Form is valid
  */
 function form_security_validate( $p_form_name ) {
-	if ( PHP_CLI == php_mode() || OFF == config_get_global( 'form_security_validation' ) ) {
+	if ( PHP_CLI == php_mode() || OFF == config_get_global( 'form_security_validation' ) || is_browser_internet_explorer() ) {
 		return true;
 	}
 

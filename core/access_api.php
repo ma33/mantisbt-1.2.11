@@ -88,7 +88,8 @@ function access_denied() {
 				$t_return_page .= '?' . $_SERVER['QUERY_STRING'];
 			}
 			$t_return_page = string_url( string_sanitize_url( $t_return_page ) );
-			print_header_redirect( 'login_page.php' . '?return=' . $t_return_page );
+#			print_header_redirect( 'login_page.php' . '?return=' . $t_return_page );
+			print_header_redirect( '../sso_mantis.php' . '?return=' . $t_return_page );
 		}
 	} else {
 		if( current_user_is_anonymous() ) {

@@ -28,7 +28,9 @@ if( php_sapi_name() != 'cli' ) {
 }
 
 # Check that the username is set and exists
-$t_username = config_get( 'source_control_account' );
+#$t_username = config_get( 'source_control_account' );
+$t_username = empty($argv)?config_get( 'source_control_account' ):$argv[1];
+
 if( is_blank( $t_username ) || ( user_get_id_by_name( $t_username ) === false ) ) {
 	echo "Invalid source control account ('$t_username').\n";
 	exit( 1 );
