@@ -1228,4 +1228,9 @@ $s_month_october = '10月';
 $s_month_november = '11月';
 $s_month_december = '12月';
 
+# ADE
 $s_sso = 'シングルサインオンする';
+
+# update_dudate
+$s_update_duedate_title = '期限一括更新';
+$s_actiongroup_menu_update_duedate = '期限更新';
