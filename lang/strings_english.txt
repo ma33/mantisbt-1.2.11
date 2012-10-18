@@ -1584,6 +1584,7 @@ $s_month_december = 'December';
 $s_sso = 'sso';
 
 # update_dudate
+$s_actiongroup_menu_update_due_date = 'update_duedate';
 $s_update_duedate_title = 'update_duedate';
 $s_actiongroup_menu_update_duedate = 'update duedate';
 $s_invalid_date_format = 'Invalid date format.';
