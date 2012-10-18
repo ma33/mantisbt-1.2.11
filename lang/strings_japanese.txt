@@ -1234,3 +1234,4 @@ $s_sso = 'シングルサインオンする';
 # update_dudate
 $s_update_duedate_title = '期限一括更新';
 $s_actiongroup_menu_update_duedate = '期限更新';
+$s_invalid_date_format = '日付の形式が不正です。';

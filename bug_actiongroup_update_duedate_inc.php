@@ -72,7 +72,7 @@
 		$t_bug_id = $p_bug_id;
 
 		if (!get_duedate()) {
-			$t_failed_validation_ids[$t_bug_id] = 'invalid date';
+			$t_failed_validation_ids[$t_bug_id] = lang_get( 'invalid_date_format' );
 			return $t_failed_validation_ids;
 		}
 
